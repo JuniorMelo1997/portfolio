@@ -6,6 +6,109 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+:root{
+    --font-primary: "Baloo Da 2", serif;
+    --font-secondary: "Josefin Slab", serif;
+    --font-action: "Muli", serif;
+}
+
+
+/* -------Burger--------- */
+.burger{
+    width: 2rem;
+    height: 2rem;
+
+    position: fixed;
+    z-index: 500;
+    right: 2rem;
+    top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    cursor: pointer;
+}
+
+
+.burger .line{
+    background-color: darkgrey;
+    width: 100%;
+    height: 14%;
+
+    border-radius: 2px;
+
+    transition: background .3s;
+}
+
+
+.burger:hover .line{
+    background-color: rgb(78, 78, 78);
+}
+
+.burger:hover #line1{
+    animation: burgerAnimation .7s;
+}
+
+.burger:hover #line2{
+    animation: burgerAnimation .7s .1s;
+}
+
+.burger:hover #line3{
+    animation: burgerAnimation .7s .2s;
+}
+
+@keyframes burgerAnimation{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.burger.closeSidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger.closeSidebar #line1{
+    transform: rotate(45deg) translateY(.425rem);
+
+    background-color: rgb(182, 48, 48);
+
+    animation: none;
+}
+
+.burger.closeSidebar #line2{
+    visibility: hidden;
+
+    animation: none;
+}
+
+.burger.closeSidebar #line3{
+    transform: rotate(-45deg) translateY(-.425rem);
+    
+    background-color: rgb(182, 48, 48);
+
+    animation: none;
+}
+
+.burger.closeSidebar:hover #line1{
+    background-color: rgb(255, 0, 0);
+}
+
+.burger.closeSidebar:hover #line3{
+    background-color: rgb(255, 0, 0);
 }
 
 /* -------Header--------- */
@@ -57,9 +160,11 @@ header .banner{
 header .banner h1{
     color: white;
     font-size: 3.5rem;
-    font-family: "Baloo Da 2", serif;
+    font-family: var(--font-primary);
     font-weight: 200;
     text-shadow: .1rem .1rem 2px rgba(0, 0, 0, .4);
+
+    max-width: 500px;
 
     line-height: 4rem;
 
@@ -70,12 +175,10 @@ header .banner h1{
 }
 
 header .banner p{
-    font-family: "Josefin Slab", serif;
+    font-family: var(--font-secondary);
     color: white;
     font-size: 2rem;
     font-weight: 600;
-    
-    text-shadow: .3rem .4rem rgba(0, 0, 0, .4);
 
     margin-bottom: 2rem;
 
@@ -84,7 +187,7 @@ header .banner p{
 }
 
 header .banner button{
-    font-family: "Muli", serif;
+    font-family: var(--font-action);
     color: white;
     font-size: .9rem;
     letter-spacing: .08rem;
@@ -120,4 +223,77 @@ header .banner button:hover{
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+
+
+/* -------Sidebar--------- */
+.sidebar.sidebarNotActive{
+    visibility: hidden;
+
+    right: -20rem;
+
+}
+
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: rgb(245, 214, 245);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+    z-index: 400;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .7s;
+}
+
+.sidebar .menu .menu-item{
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.sidebar .menu-link{
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color: #555;
+
+    transition: color .2s;
+}
+
+.sidebar .menu-link:hover{
+    color: rgb(202, 24, 202);
+}
+
+.sidebar .social-media{
+    margin-top: 8rem;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media i{
+    color: #555;
+
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: color .2s;
+}
+
+.social-media i:hover{
+    color: rgb(202, 24, 202);
 }
