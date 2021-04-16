@@ -25,7 +25,7 @@
 
         <header>
             <div class="img-wrapper">
-                <img src="./img/header-background.jpg" alt="">
+                <img src="./img/header-background.jpg" alt="Desenvolvimento web">
             </div>
             <div class="banner">
                 <h1>Web Developer & Front End Designer</h1>
@@ -34,7 +34,7 @@
             </div>
         </header>
 
-        <div class="sidebar sidebarNotActive">
+        <aside class="sidebar sidebarNotActive">
             <nav>
                 <ul class="menu">
                     <li class="menu-item"><a class="menu-link" href="#">Home</a></li>
@@ -49,7 +49,120 @@
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
             </div>
-        </div>  
+        </aside>  
+
+        <section class="section-conhecimentos">
+            <div class="section-header">
+                <h1>Conhecimentos</h1>
+            </div>
+            <div class="conhecimentos">
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML 5</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque ipsum officia libero ratione, sapiente saepe repellat nihil voluptas sint dolorem quod deserunt et odio blanditiis provident aut a illo!</p>
+                    </div>
+                </div>
+                
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS 3</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolores asperiores unde cupiditate nam vero deserunt distinctio, ullam alias minus! Fuga debitis quasi provident similique ea sapiente iste cum ullam!</p>
+                    </div>
+                </div>
+                    
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-js-square"></i>
+                        <h3>JavaScript ES6</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolores asperiores unde cupiditate nam vero deserunt distinctio, ullam alias minus! Fuga debitis quasi provident similique ea sapiente iste cum ullam!</p>
+                    </div>
+                </div>
+                    
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-react"></i>
+                        <h3>React e React Native</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolores asperiores unde cupiditate nam vero deserunt distinctio, ullam alias minus! Fuga debitis quasi provident similique ea sapiente iste cum ullam!</p>
+                    </div>
+                </div>
+                    
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-node"></i>
+                        <h3>Node JS</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolores asperiores unde cupiditate nam vero deserunt distinctio, ullam alias minus! Fuga debitis quasi provident similique ea sapiente iste cum ullam!</p>
+                    </div>
+                </div>
+                    
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Mongo e MySQL</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolores asperiores unde cupiditate nam vero deserunt distinctio, ullam alias minus! Fuga debitis quasi provident similique ea sapiente iste cum ullam!</p>
+                    </div>
+                </div>
+
+                <div class="conhecimento-img-wrapper">
+                    <img src="./img/conhecimento-img.png" alt="Conhecimentos">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-projetos">
+            <div class="section-header">
+                <h1>Projetos</h1>
+            </div>
+                <div class="projetos">
+                    <div class="card" onmouseover="changeCardInfoVisibility(0)" onmouseout="changeCardInfoVisibility(0)">
+                        <div class="img-wrapper">
+                            <img src="./img/image1.jpg" alt="">
+                        </div>
+
+                        <div class="card-info inactive">                                
+                            <h2>HTML & CSS</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, distinctio nobis? Itaque eius commodi, vero officia minima esse necessitatibus illo, nobis ratione voluptate nam, error eaque ipsa deleniti temporibus sequi.</p>
+                            <a href="#"><button>Saiba mais</button></a>
+                        </div>
+                    </div>
+                    <div class="card" onmouseover="changeCardInfoVisibility(1)" onmouseout="changeCardInfoVisibility(1)">
+                        <div class="img-wrapper">
+                            <img src="./img/image2.jpg" alt="">
+                        </div>
+                        
+                        <div class="card-info inactive">
+                            <h2>React</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, sapiente molestiae explicabo assumenda eum sit aut adipisci atque. Sint delectus esse rem beatae autem harum. Sapiente voluptas modi cupiditate iure!</p>
+                            <a href="#"><button>Saiba mais</button></a>
+                        </div>
+                    </div>
+                    <div class="card" onmouseover="changeCardInfoVisibility(2)" onmouseout="changeCardInfoVisibility(2)">
+                        <div class="img-wrapper">
+                            <img src="./img/image3.jpg" alt="">
+                        </div>
+                        
+                        <div class="card-info inactive">
+                            <h2>Node</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aperiam doloremque delectus voluptates eos inventore iure iusto voluptate, perspiciatis blanditiis amet, voluptatem repellat maxime! Minima ratione cumque dicta ea atque?</p>
+                            <a href="#"><button>Saiba mais</button></a>
+                        </div>
+                    </div>
+                </div>
+        </section>
 
     </div>
 
