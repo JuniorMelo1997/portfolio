@@ -2,7 +2,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
 
-/* -------Global--------- */
+/* -------Globais e geral--------- */
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +11,10 @@
 }
 
 
-body { 
+html,body
+{
+    width: 100%;
+    height: 100%;
     overflow-x: hidden; 
 }
 
@@ -22,6 +25,24 @@ body {
     --font-action: "Muli", serif;
 }
 
+
+.btn{
+    margin-top: 1rem;
+
+    font-family: var(--font-action);
+    color: white;
+    font-size: .9rem;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+
+    background: #b82b82; 
+
+    padding: .75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
 
 /* -------Burger--------- */
 .burger{
@@ -192,19 +213,9 @@ header .banner p{
 }
 
 header .banner button{
-    font-family: var(--font-action);
-    color: white;
-    font-size: .9rem;
-    letter-spacing: .08rem;
-    text-transform: uppercase;
-
     background: #AA076B; 
 
     padding: 1rem 2rem;
-    border: none;
-    border-radius: 5px;
-
-    cursor: pointer;
 
     opacity: 0;
     animation: moveBanner 1s .9s forwards;
@@ -503,22 +514,6 @@ header .banner button:hover{
 }
 
 .projetos .card .card-info button{
-    margin-top: 1rem;
-
-    font-family: var(--font-action);
-    color: white;
-    font-size: .9rem;
-    letter-spacing: .08rem;
-    text-transform: uppercase;
-
-    background: #b82b82; 
-
-    padding: .75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-
-    cursor: pointer;
-
     opacity: 0;
     animation: moveBanner 1s .9s forwards;
 
@@ -528,4 +523,192 @@ header .banner button:hover{
 .projetos .card .card-info button:hover{
     background: #7a044d; 
     color: rgb(230, 230, 230);
+}
+
+
+
+
+/* -------Seção contato--------- */
+.section-contato{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contato-left{
+    width: 35%;
+    height: 100%;
+    background: linear-gradient(rgba(80, 52, 52, 0.3),rgba(71, 40, 40, 0.4)), url("./img/contato-img.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contato-right{
+    width: 65%;
+    background-color: #eee;
+    padding: 1rem 3rem;
+}
+
+.section-contato .contato-right h1{
+    font-family: var(--font-primary);
+    color: #272727;
+    font-size: 2.3rem;
+    font-weight: 500;
+
+    text-align: center;
+}
+
+.section-contato .contato-right form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-contato .contato-right form .input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-contato .contato-right form .input-group .field{
+    background: rgba(256, 256, 256, .2);
+    border: none;
+    border-radius: 3px;
+    width: 20rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    border-bottom: .1rem solid rgb(122, 114, 114);
+    outline-color:rgb(202, 24, 202);
+
+    transition: background .3s;
+}
+
+.section-contato .contato-right form .input-group textarea.field{
+    height: 8rem;
+    max-width: 30rem;
+    max-height: 12rem;
+}
+
+.section-contato .contato-right form .input-group .field:focus{
+    background-color: rgb(204, 204, 204);
+}
+
+.section-contato .contato-right form .input-group label{
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.section-contato .contato-right form .btn-submit{
+    width: 20rem;
+    transition: background .3s;
+}
+.section-contato .contato-right form .btn-submit:hover{
+    background: #AA076B; 
+}
+
+
+/* -------Budget--------- */
+
+.budget-section{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.budget-left{
+    width: 65%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+   
+}
+
+.budget-left h1{
+    font-family: var(--font-primary);
+    color: #272727;
+    font-size: 2.3rem;
+    font-weight: 500;
+
+    text-align: center;
+}
+
+.budget-left form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    
+    color: #272727;
+}
+
+.budget-left form .input-group{
+    margin: .7rem;
+}
+
+.budget-left form #numberOfPages{
+    display: block;
+    background: rgba(256, 256, 256, .2);
+    border: none;
+    border-radius: 3px;
+    width: 20rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    border-bottom: .1rem solid rgb(122, 114, 114);
+    outline-color:rgb(202, 24, 202);
+    text-align: center;
+
+    transition: background .3s;
+}
+
+.budget-left form #numberOfPages:focus{
+    background-color: rgb(231, 227, 227);
+}
+
+.budget-left form #deadline{
+    width: 100%;
+    cursor: pointer;
+}
+
+.budget-left form #js,
+.budget-left form .layout{
+    cursor: pointer;
+}
+
+.budget-left form .btn-budget{
+    margin: 0;
+    transition: background .4s;
+}
+
+.budget-left form .btn-budget:hover{
+    background: #AA076B; 
+}
+
+.budget-right{
+    width: 35%;
+    height: 100%;
+    background: linear-gradient(rgba(80, 52, 52, 0.3),rgba(71, 40, 40, 0.4)), url("./img/budget-image.jpg");
+    background-size: cover;
 }

@@ -30,7 +30,7 @@
             <div class="banner">
                 <h1>Web Developer & Front End Designer</h1>
                 <p>Genival de Melo Junior</p>
-                <button>Saiba mais</button>
+                <button class="btn">Saiba mais</button>
             </div>
         </header>
 
@@ -136,7 +136,7 @@
                         <div class="card-info inactive">                                
                             <h2>HTML & CSS</h2>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, distinctio nobis? Itaque eius commodi, vero officia minima esse necessitatibus illo, nobis ratione voluptate nam, error eaque ipsa deleniti temporibus sequi.</p>
-                            <a href="#"><button>Saiba mais</button></a>
+                            <a href="#"><button class="btn">Saiba mais</button></a>
                         </div>
                     </div>
                     <div class="card" onmouseover="changeCardInfoVisibility(1)" onmouseout="changeCardInfoVisibility(1)">
@@ -147,7 +147,7 @@
                         <div class="card-info inactive">
                             <h2>React</h2>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, sapiente molestiae explicabo assumenda eum sit aut adipisci atque. Sint delectus esse rem beatae autem harum. Sapiente voluptas modi cupiditate iure!</p>
-                            <a href="#"><button>Saiba mais</button></a>
+                            <a href="#"><button class="btn">Saiba mais</button></a>
                         </div>
                     </div>
                     <div class="card" onmouseover="changeCardInfoVisibility(2)" onmouseout="changeCardInfoVisibility(2)">
@@ -158,10 +158,79 @@
                         <div class="card-info inactive">
                             <h2>Node</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aperiam doloremque delectus voluptates eos inventore iure iusto voluptate, perspiciatis blanditiis amet, voluptatem repellat maxime! Minima ratione cumque dicta ea atque?</p>
-                            <a href="#"><button>Saiba mais</button></a>
+                            <a href="#"><button class="btn">Saiba mais</button></a>
                         </div>
                     </div>
                 </div>
+        </section>
+
+        <section class="section-contato">
+            <div class="contato-wrapper">
+                <div class="contato-left"></div>
+                <div class="contato-right">
+                    <h1>Contato</h1>
+                    <form action="">
+                        <div class="input-group">
+                            <label for="nome">Nome</label>
+                            <input id="nome" type="text" class="field" required placeholder="Insira seu nome">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" class="field" required placeholder="Isira seu email">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea name="mensagem" id="mensagem" class="field" cols="30" rows="10" placeholder="Insira uma mensagem"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="budget-section">
+            <div class="budget-left">
+                        <h1>Faça um orçamento</h1>
+                        <form action="">
+                            <div class="input-group">
+                                <label for="numberOfPages">Número de páginas</label>
+                                <input type="number" placeholder="Número de páginas" name="numberOfPages" id="numberOfPages">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="js">Preciso de um script JS</label>
+                                <input type="checkbox" name="js" id="js">
+                            </div>
+
+                            <div class="input-group">                               
+                                <label>Precisa de um Layout?</label>
+                                <div class="group-layout">
+                                    <div>
+                                        <input type="radio" class="layout" name="layout" id="layout-yes">
+                                        <label for="layut-yes">Sim, preciso de um Layout</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" class="layout" name="layout" id="layout-no">
+                                        <label for="layut-no">Não, já tenho um Layout</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="deadline">Prazo</label>
+                                <input type="range" name="deadline" id="deadline">
+                            </div>
+
+                            <button type="submit" class="btn btn-budget">Enviar</button>
+                        </form>
+            </div>
+            <div class="budget-right">
+
+            </div>
+
         </section>
 
     </div>
